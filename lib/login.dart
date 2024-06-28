@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexa_dairy/signup.dart';
+import 'package:hexa_dairy/disha.dart';
 
 class Login extends StatelessWidget{
 
@@ -77,7 +78,14 @@ class Login extends StatelessWidget{
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Signup()));
               },
                   child:Text("Sign up")
-              )
+              ),
+              SizedBox(height: 20,),
+              ElevatedButton(onPressed: (){
+
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyApp()));
+              },
+                  child:Text("Skip")
+              ),
             ],
           ),
         ),
