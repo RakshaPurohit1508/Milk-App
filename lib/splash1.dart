@@ -30,7 +30,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState(){
-    Timer(Duration(seconds: 5),() {
+    Timer(Duration(seconds: 6),() {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login()));
     }
     );

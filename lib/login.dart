@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexa_dairy/signup.dart';
-import 'package:hexa_dairy/disha.dart';
+import 'package:hexa_dairy/firstscreen.dart';
 
 class Login extends StatelessWidget{
 
@@ -66,26 +66,32 @@ class Login extends StatelessWidget{
                     )
                 ),
               ),
-              SizedBox(height: 20,),
-              ElevatedButton(onPressed: (){
-                login(email: emailController.text, password: passwordController.text);
-              },
-                  child:Text("Login")
-              ),
-              SizedBox(height: 20,),
-              ElevatedButton(onPressed: (){
+              Row(
+                children: [
+                  SizedBox(height: 20,),
+                  ElevatedButton(onPressed: (){
+                    login(email: emailController.text, password: passwordController.text);
+                  },
+                      child:Text("Login")
+                  ),
+                  SizedBox(height: 20,),
+                  ElevatedButton(onPressed: (){
 
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Signup()));
-              },
-                  child:Text("Sign up")
-              ),
-              SizedBox(height: 20,),
-              ElevatedButton(onPressed: (){
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Signup()));
+                  },
+                      child:Text("Sign up")
+                  ),
+                  SizedBox(height: 20,),
+                  ElevatedButton(onPressed: (){
 
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyApp()));
-              },
-                  child:Text("Skip")
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyApp()));
+                  },
+                      child:Text("Skip")
+                  ),
+                ],
+
               ),
+
             ],
           ),
         ),
